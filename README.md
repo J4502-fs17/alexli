@@ -1,3 +1,3 @@
 # alexli
 
-http://j4502-fs17.github.io/repositoryalexli
+http://j4502-fs17.github.io/alexli
