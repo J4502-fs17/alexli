@@ -30,37 +30,75 @@ h4{
 
 #container{
   width:100%;
+  height: auto;
   background-color:#ffffff;
   margin:0 auto;
   text-align:center;
 }
 
-#nav li{
-  list-style-type:none;
-  text-align:center;
-  margin:0;
-  padding:0;
-  font-family: "Raleway", Helvetica, sans-serif;
-}
-
-#nav a:link, #nav a:visited{
+.nav a:link, #nav a:visited{
   color:#ffffff;
   background-color:#407346;
-  display:block;
+  display: block;
   text-align:center;
   font-weight:bold;
   text-decoration:none;
-  padding:4px;
+  padding:20px;
   font-family: "Raleway", Helvetica, sans-serif;
 }
 
-#nav a:hover,#nav a:active{
+.nav a:hover,#nav a:active{
   background-color:#1b311e;
   text-align:center;
   font-family: "Raleway", Helvetica, sans-serif;
 }
 
+.nav{
+	display: flex;
+	flex-direction: column;
+  justify-content: flex-start;
+}
+
+@media (min-width: 600px) {
+	.nav {
+		flex-direction: row;
+    justify-content: space-around;
+	}
+}
+
+@media (min-width: 700px) {
+  .link1{
+    margin-right: auto;
+  }
+  .nav{
+    padding-left: 5px;
+    padding-right: 5px;
+  }
+}
+
+ img{
+  margin:15px;
+  display: flex;
+  width:400px;
+}
+
+ @media (min-width:600px) {
+  img{
+    float:left;
+  }
+}
+
 #footer{
   color:black;
   font-family: "Raleway", Helvetica, sans-serif;
-  font-size: 0.8em
+  font-size: 0.8em;
+}
+
+.content{
+  text-align:justify;
+  padding:5px;
+  margin-bottom: 150px;
+  margin-top: 0;
+  font-family: "Raleway", Helvetica, sans-serif;
+  line-height:normal;
+}
