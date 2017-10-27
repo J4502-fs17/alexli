@@ -85,6 +85,7 @@ h4{
  img{
   margin:15px;
   display: flex;
+  text-align: justify;
   width:300px;
 }
 
