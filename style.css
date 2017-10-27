@@ -14,7 +14,8 @@ body{
 
 .teaser{
   font-family: "Raleway", Helvetica, sans-serif;
-  text-align: left;  
+  text-align: left;
+  margin:5px;
 }
 
 h1{
@@ -84,13 +85,13 @@ h4{
  img{
   margin:15px;
   display: flex;
-  width:400px;
-  margin-right: 10px;
+  width:300px;
 }
 
  @media (min-width:600px) {
   img{
     float:left;
+    width: 30%;
   }
 }
 
@@ -102,7 +103,9 @@ h4{
 
 .content{
   text-align:justify;
-  padding:5px;
+  padding:10px;
+  margin-left: 5px;
+  margin-right: 5px;
   margin-bottom: 150px;
   margin-top: 0;
   font-family: "Raleway", Helvetica, sans-serif;
