@@ -171,17 +171,17 @@ h4{
     grid-area: g;
   }
 
-@media screen and (min-width:1200px) {
-  #container {
-    display: grid;
-    grid-template-columns: 200px 1fr 1fr 1fr;
-    grid-gap: 20px;
-    grid-template-areas:
-    "e e e e"
-    "f f f f"
-    "a a c c"
-    "a a c c"
-    "b d d d"
-    ". g g g";
+  @media screen and (min-width:1200px) {
+    #container {
+      display: grid;
+      grid-template-columns: 200px 1fr 1fr 1fr;
+      grid-gap: 20px;
+      grid-template-areas:
+      "e e e e"
+      "f f f f"
+      "a a c c"
+      "a a c c"
+      "b d d d"
+      ". g g ."
+    }
   }
-}
