@@ -20,27 +20,20 @@ body{
 
 h1{
   font-family:"Antic Slab", Georgia, "Times New Roman", serif;
-  font-size: 2.5em
 }
 
-h4{
-  font-family: "Roboto", Helvetica, sans-serif;
-  font-style: italic;
-  font-size:0.8em
-}
-
-#header{
+header{
   background-color:#2e5232;
   color: white;
   width: 100%;
 }
 
-#container{
+body{
   width:100%;
   background-color:#ffffff;
 }
 
-.nav a:link, #nav a:visited{
+nav ul li a:link,a:visited{
   color:#ffffff;
   background-color:#407346;
   display: block;
@@ -51,39 +44,46 @@ h4{
   font-family: "Raleway", Helvetica, sans-serif;
 }
 
-.nav a:hover,#nav a:active{
+nav ul li a:hover, a:active{
   background-color:#1b311e;
   text-align:center;
   font-family: "Raleway", Helvetica, sans-serif;
 }
 
-.nav{
-	display: flex;
-	flex-direction: column;
-  justify-content: flex-start;
+header{
+  display: flex;
+  flex-flow: row;
+  background-color: #407346;
+  margin: 0;
+  padding:0 10px;
 }
 
-@media (min-width: 600px) {
-	.nav {
-		flex-direction: row;
-    justify-content: space-around;
-	}
+nav a{
+  display: block;
+  text-decoration: none;
+  padding: 20px 30px;
+}
+
+.menu-trigger{
+    order: 1;
+}
+
+header h1{
+  order: 2;
+}
+
+nav ul{
+  display: none;
+}
+
+li{
+	display: flex;
+  display: block;
 }
 
 @media (min-width: 800px) {
   .link1{
     margin-right: auto;
-  }
-  .nav{
-    padding-left: 5px;
-    padding-right: 5px;
-  }
-}
-
- @media (min-width:600px) {
-  .authorbox{
-    float:left;
-    width: 30%;
   }
 }
 
@@ -104,13 +104,14 @@ h4{
   line-height:normal;
 }
 
-@media screen  and (min-width:200px){
-  #container{
-    width:100%
-  }
+.menu-trigger{
+  background-color: #407346;
+  display: flex;
+}
 
+@media screen  and (min-width:200px){
   .authorbox{
-    width:25%;
+    width:40%;
     max-width: 500px;
     float:left;
     margin:10px;
@@ -122,24 +123,36 @@ h4{
     width: 100%;
     margin-top: 0;
   }
-
-  .content{
-    max-width: 800px;
-  }
 }
 
 @media screen and (min-width:600px) {
-  #container {
+  .menu-trigger{
+    display:none;
+  }
+
+  nav ul{
+    display: flex;
+    flex-direction: row;
+  }
+
+  body {
     display: grid;
     grid-template-columns: 200px 1fr 1fr;
     grid-gap:20px;
     grid-template-areas:
     "e e e"
-    "f f f"
     "a c c"
     "b c c"
     "d d d"
     "g g g";
+  }
+
+  nav{
+    order: 2;
+  }
+
+  header h1{
+    order:1;
   }
 
   .authorbox {
@@ -159,12 +172,8 @@ h4{
     grid-area: d;
   }
 
-  #header{
+  header{
     grid-area: e;
-  }
-
-  .nav{
-    grid-area:f;
   }
 
   #footer{
@@ -172,17 +181,20 @@ h4{
   }
 }
 
-  @media screen and (min-width:1200px) {
-    #container {
+@media screen and (min-width:1200px) {
+  .menu-trigger{
+    display:none;
+  }
+
+  body {
       display: grid;
       grid-template-columns: 200px 1fr 1fr 1fr;
       grid-gap: 20px;
       grid-template-areas:
       "e e e e"
-      "f f f f"
       "a a c c"
       "a a c c"
       "b d d d"
       ". g g ."
-    }
   }
+}
