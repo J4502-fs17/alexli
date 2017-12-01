@@ -144,6 +144,7 @@ li{
     "a c c"
     "b c c"
     "d d d"
+    "h h h"
     "g g g";
   }
 
@@ -179,6 +180,10 @@ li{
   #footer{
     grid-area: g;
   }
+
+  .map-wrapper{
+    grid-area: h;
+  }
 }
 
 @media screen and (min-width:1200px) {
@@ -195,6 +200,26 @@ li{
       "a a c c"
       "a a c c"
       "b d d d"
+      "h h h h"
       ". g g ."
   }
+}
+
+/* =================================
+  Page Styles
+==================================== */
+
+.map-wrapper {
+    overflow:hidden;
+    padding-bottom:56.25%;
+    position:relative;
+    height:0;
+}
+
+.map-wrapper iframe{
+    left:0;
+    top:0;
+    height:100%;
+    width:100%;
+    position:absolute;
 }
